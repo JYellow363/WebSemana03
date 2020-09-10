@@ -13,17 +13,17 @@ import pe.edu.upc.service.IMotorService;
 
 @Named
 @RequestScoped
-public class MotorServiceImpl implements IMotorService, Serializable{
+
+public class MotorServiceImpl implements IMotorService, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
 	private IMotorDao mD;
-	
+
 	@Override
 	public void insertar(Motor motor) {
-		mD.insertar(motor);
-		
+		mD.insertar(motor);		
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class MotorServiceImpl implements IMotorService, Serializable{
 
 	@Override
 	public void eliminar(int idMotor) {
-		mD.eliminar(idMotor);
+		mD.eliminar(idMotor);		
 	}
 
 }

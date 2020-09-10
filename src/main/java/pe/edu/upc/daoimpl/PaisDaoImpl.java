@@ -9,10 +9,10 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 
-import pe.edu.upc.dao.IMotorDao;
-import pe.edu.upc.entity.Motor;
+import pe.edu.upc.dao.IPaisDao;
+import pe.edu.upc.entity.Pais;
 
-public class MotorDaoImpl implements IMotorDao, Serializable {
+public class PaisDaoImpl implements IPaisDao, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -21,9 +21,9 @@ public class MotorDaoImpl implements IMotorDao, Serializable {
 
 	@Transactional
 	@Override
-	public void insertar(Motor motor) {
+	public void insertar(Pais pais) {
 		try {
-			em.persist(motor);
+			em.persist(pais);
 		}
 		catch(Exception ex) {
 			System.out.println(ex.getMessage());
@@ -33,11 +33,11 @@ public class MotorDaoImpl implements IMotorDao, Serializable {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Motor> listar() {
-		List<Motor> lista = new ArrayList<Motor>();
+	public List<Pais> listar() {
+		List<Pais> lista = new ArrayList<Pais>();
 		try {
-			Query q = em.createQuery("select m from Motor m");
-			lista = (List<Motor>) q.getResultList();
+			Query q = em.createQuery("select p from Pais p");
+			lista = (List<Pais>) q.getResultList();
 		}
 		catch(Exception ex) {
 			System.out.println(ex.getMessage());
@@ -47,11 +47,11 @@ public class MotorDaoImpl implements IMotorDao, Serializable {
 
 	@Transactional
 	@Override
-	public void eliminar(int idMotor) {
-		Motor mot = new Motor();
+	public void eliminar(int idPais) {
+		Pais pais = new Pais();
 		try {
-			mot = em.getReference(Motor.class,idMotor);
-			em.remove(mot);
+			pais = em.getReference(Pais.class,idPais);
+			em.remove(pais);
 		}
 		catch(Exception ex) {
 			System.out.println(ex.getMessage());

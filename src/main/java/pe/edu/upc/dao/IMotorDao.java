@@ -1,7 +1,6 @@
 package pe.edu.upc.dao;
 
 import java.util.List;
-
 import pe.edu.upc.entity.Motor;
 
 public interface IMotorDao {
@@ -9,4 +8,3 @@ public interface IMotorDao {
 	public List<Motor> listar();
 	public void eliminar(int idMotor);
 }
-

@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
- 	<modelVersion>4.0.0</modelVersion>
-  	<groupId>pe.edu.pe</groupId>
-  	<artifactId>WebSemana03</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  	<packaging>war</packaging>
-  
- 	 <build>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>pe.edu.upc</groupId>
+  <artifactId>WebSemana03</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+ 	<build>
 		<finalName>WebSemana03</finalName>
 		<plugins>
 			<plugin>
@@ -39,7 +39,7 @@
 			<artifactId>primefaces</artifactId>
 			<version>7.0</version>
 		</dependency>
-		<!-- mvnrepository.com/artifact/org.omnifaces/omnifaces -->
+		<!-- https://mvnrepository.com/artifact/org.omnifaces/omnifaces -->
 		<dependency>
 			<groupId>org.omnifaces</groupId>
 			<artifactId>omnifaces</artifactId>
@@ -58,4 +58,6 @@
 		</dependency>	
 	</dependencies>
   
+  
+ 
 </project>

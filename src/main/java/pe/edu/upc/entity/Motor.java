@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="motor")
 public class Motor implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -23,7 +24,7 @@ public class Motor implements Serializable {
 	private String nombreMotor;
 	
 	private Date fechaMotor;
-	
+
 	public Motor() {
 		super();
 	}
@@ -34,7 +35,7 @@ public class Motor implements Serializable {
 		this.nombreMotor = nombreMotor;
 		this.fechaMotor = fechaMotor;
 	}
-	
+
 	public int getIdMotor() {
 		return idMotor;
 	}
@@ -42,7 +43,7 @@ public class Motor implements Serializable {
 	public void setIdMotor(int idMotor) {
 		this.idMotor = idMotor;
 	}
-	
+
 	public String getNombreMotor() {
 		return nombreMotor;
 	}
@@ -58,6 +59,5 @@ public class Motor implements Serializable {
 	public void setFechaMotor(Date fechaMotor) {
 		this.fechaMotor = fechaMotor;
 	}
-	
 	
 }

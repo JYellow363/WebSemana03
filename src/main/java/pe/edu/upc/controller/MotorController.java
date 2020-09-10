@@ -23,26 +23,11 @@ public class MotorController implements Serializable {
 	private Motor motor;
 	List<Motor> listaMotores;
 	
-	public Motor getMotor() {
-		return motor;
-	}
-
-	public void setMotor(Motor motor) {
-		this.motor = motor;
-	}
-
-	public List<Motor> getListaMotores() {
-		return listaMotores;
-	}
-
-	public void setListaMotores(List<Motor> listaMotores) {
-		this.listaMotores = listaMotores;
-	}
-	
 	@PostConstruct
 	public void init() {
 		this.listaMotores = new ArrayList<Motor>();
 		this.motor = new Motor();
+		this.listar();
 	}
 	
 	public String nuevoMotor() {
@@ -60,14 +45,14 @@ public class MotorController implements Serializable {
 			System.out.println(ex.getMessage());
 		}
 	}
-	
+		
 	public void listar() {
 		try {
 			listaMotores = mService.listar();
 		}
 		catch(Exception ex) {
 			System.out.println(ex.getMessage());
-		}
+		}		
 	}
 	
 	public void limpiarMotor() {
@@ -81,6 +66,27 @@ public class MotorController implements Serializable {
 		}
 		catch(Exception ex) {
 			System.out.println(ex.getMessage());
-		}
+		}			
 	}
+	
+
+	public Motor getMotor() {
+		return motor;
+	}
+
+	public void setMotor(Motor motor) {
+		this.motor = motor;
+	}
+
+	public List<Motor> getListaMotores() {
+		return listaMotores;
+	}
+
+	public void setListaMotores(List<Motor> listaMotores) {
+		this.listaMotores = listaMotores;
+	}
+	
+	
+	
+
 }
